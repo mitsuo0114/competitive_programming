@@ -1,0 +1,24 @@
+-- Example 0
+1
+L
+
+bounded
+-- Example 1
+1
+SRSL
+
+unbounded
+-- Example 2
+2
+SSSS
+R
+
+bounded
+-- Example 3
+4
+SRSL
+LLSSSSSSL
+SSSSSS
+L
+
+unbounded

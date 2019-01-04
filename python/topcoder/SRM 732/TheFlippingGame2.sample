@@ -1,0 +1,62 @@
+-- Example 0
+3
+3
+3
+bwe
+web
+ebw
+
+3
+-- Example 1
+3
+3
+3
+bwe
+wbw
+ewb
+
+3
+-- Example 2
+4
+4
+4
+beww
+beww
+beww
+wewe
+
+2
+-- Example 3
+20
+20
+20
+bwbwbwbwbwbwbwbwbwbw
+wbwbwbwbwbwbwbwbwbwb
+bwbwbwbwbwbwbwbwbwbw
+wbwbwbwbwbwbwbwbwbwb
+bwbwbwbwbwbwbwbwbwbw
+wbwbwbwbwbwbwbwbwbwb
+bwbwbwbwewbwbwbwbwbw
+wbwbwbwbebwbwbwbwbwb
+bwbwbwbwewbwbwbwbwbw
+wbwbwbwbebwbwbwbwbwb
+bwbwbwbwewbwbwbwbwbw
+wbwbwbwbebwbwbwbwbwb
+bwbwbwbwewbwbwbwbwbw
+wbwbwbwbebwbwbwbwbwb
+bwbwbwbwewbwbwbwbwbw
+wbwbwbwbwbwbwbwbwbwb
+bwbwbwbwbwbwbwbwbwbw
+wbwbwbwbwbwbwbwbwbwb
+bwbwbwbwbwbwbwbwbwbw
+wbwbwbwbwbwbwbwbwbwe
+
+16
+-- Example 4
+2
+8
+2
+ewewbbbb
+bwebewww
+
+3
