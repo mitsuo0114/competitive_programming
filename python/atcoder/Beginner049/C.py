@@ -1,52 +1,26 @@
-from collections import Counter
-
-
-class UnionFind:
-    def __init__(self, n):
-        self.parents = [i for i in range(n + 1)]
-
-    def root(self, i):
-        if self.parents[i] == i:
-            return i
-        else:
-            self.parents[i] = self.root(self.parents[i])
-            return self.parents[i]
-
-    def unite(self, i, j):
-        self.parents[self.root(self.parents[i])] = self.root(j)
-
-    def is_unite(self, i, j):
-        return self.root(i) == self.root(j)
-
-
-def solve(N, K, L, PQs, RSs):
-    road_cities = UnionFind(N)
-    train_cities = UnionFind(N)
-
-    for p, q in PQs:
-        road_cities.unite(p, q)
-    for r, s in RSs:
-        train_cities.unite(r, s)
-
-    counts = Counter([
-        (road_cities.root(i), train_cities.root(i))
-        for i in range(1, N + 1)
-    ])
-
-    ans = [
-        counts[(road_cities.root(i), train_cities.root(i))]
-        for i in range(1, N + 1)
-    ]
-
-    return " ".join([str(c) for c in ans])
-
+def solve(S):
+    S = S[::-1]
+    for _ in range(len(S) // 5 + 1):
+        if S[:5] == "dream"[::-1]:
+            S = S[5:]
+        if S[:5] == "erase"[::-1]:
+            S = S[5:]
+        if S[:6] == "eraser"[::-1]:
+            S = S[6:]
+        if S[:7] == "dreamer"[::-1]:
+            S = S[7:]
+    if len(S):
+        return "NO"
+    else:
+        return "YES"
+#
+# assert(solve("erasedream") == "YES")
+# assert(solve("dreameraser") == "YES")
+# assert(solve("dreamerer") == "NO")
+# assert(solve("dreamdreamerer") == "NO")
+# assert(solve("erasdreamerer") == "NO")
+# assert(solve("dreameraserer") == "NO")
 
 if __name__ == "__main__":
-    N, K, L = map(int, input().split(" "))
-    PQs = []
-    RSs = []
-    for _ in range(K):
-        PQs.append(tuple(map(int, input().split(" "))))
-    for _ in range(L):
-        RSs.append(tuple(map(int, input().split(" "))))
-    print(solve(N, K, L, PQs, RSs))
+    S = input()
+    print(solve(S))
